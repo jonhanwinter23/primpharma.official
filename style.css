@@ -1887,7 +1887,7 @@ body{
 	  #00D8C1
 	); /* This creates a gradient background */
 	padding: 50px 0; /* This adds space to the top and bottom of the section */
-	margin: 50px 0; /* This adds space between this section and other sections */
+	margin: 150px 0; /* This adds space between this section and other sections */
   }
   
 
@@ -2395,8 +2395,12 @@ body{
 /*=======================
 	Start Blog CSS
 =========================*/
+/* Add space between blog and team sections */
+
+
 .blog{
 	background:#fff;
+	margin-bottom: 30px !important; 
 }
 .blog .blog-title{
 	text-align:center;
@@ -4572,3 +4576,57 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+
+/*=========================
+	Blog
+===========================*/
+.single-news {
+    width: 350px; /* Set the width of each container */
+    height: 400px; /* Set the height of each container */
+    margin-bottom: 30px; /* Add some bottom margin for spacing */
+}
+
+.single-news .news-head img {
+    width: 100%; /* Make the image inside the container responsive */
+    height: 350px; /* Set the height of the image */
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.single-news .news-content {
+    padding: 15px; /* Add padding to the content area */
+    height: calc(100% - 200px); /* Calculate the height of the content area */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.single-news .date {
+    margin-bottom: 10px; /* Add some bottom margin to the date */
+}
+
+.single-news h2 {
+    font-size: 18px; /* Set the font size of the heading */
+    margin-bottom: 10px; /* Add some bottom margin to the heading */
+}
+
+.single-news p.text {
+    font-size: 14px; /* Set the font size of the text */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis to the text if it overflows */
+    display: -webkit-box; /* Use WebKit-specific display property for multi-line ellipsis */
+    -webkit-line-clamp: 3; /* Limit the number of lines to show */
+    -webkit-box-orient: vertical; /* Set the direction to vertical */
+}
+
+@media (max-width: 768px) {
+	.single-news {
+	  width: calc(100% - 30px); /* Set width to full width of screen minus some padding */
+	  height: auto; /* Allow height to adjust based on content */
+	  margin-bottom: 20px; /* Adjust margin for smaller screens */
+	}
+  
+	.single-news .news-head img {
+	  width: 100%; /* Make the image inside the container responsive */
+	  height: auto; /* Allow image height to adjust based on aspect ratio */
+	}
+  }
+  
+
