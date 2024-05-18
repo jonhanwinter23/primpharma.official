@@ -1887,7 +1887,7 @@ body{
 	  #00D8C1
 	); /* This creates a gradient background */
 	padding: 50px 0; /* This adds space to the top and bottom of the section */
-	margin: 150px 0; /* This adds space between this section and other sections */
+	margin: 100px 0; /* This adds space between this section and other sections */
   }
   
 
@@ -2487,6 +2487,39 @@ body{
 .blog.grid .single-news{
 	margin-top:30px;
 }
+
+/* For screens smaller than 992px (tablet portrait and below) */
+@media (max-width: 992px) {
+    .blog .col-lg-4 {
+        flex: 0 0 100%; /* Set columns to occupy full width */
+        max-width: 100%;
+        margin-bottom: 20px; /* Adjust margin for smaller screens */
+    }
+}
+
+/* For screens smaller than 768px (tablet landscape and below) */
+@media (max-width: 768px) {
+    .blog .news-content {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* For screens smaller than 576px (mobile and below) */
+@media (max-width: 576px) {
+    .blog .single-news {
+        margin-bottom: 20px; /* Adjust margin for smaller screens */
+    }
+    .blog .news-content {
+        padding: 15px; /* Further adjust padding for smaller screens */
+    }
+    .blog .news-body h2 {
+        font-size: 16px; /* Decrease font size for smaller screens */
+    }
+    .blog .news-content p {
+        font-size: 12px; /* Decrease font size for smaller screens */
+    }
+}
+
 /* Blog Sidebar */
 .main-sidebar {
 	background: #fff;
